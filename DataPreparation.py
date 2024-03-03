@@ -41,6 +41,8 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
+pickle.dump(scaler, open('scaler.pkl', 'wb'))
+
 # Model Training
 regression = LinearRegression()
 param_grid = {'fit_intercept': [True, False], 'copy_X': [True, False], "positive": [True, False]}
