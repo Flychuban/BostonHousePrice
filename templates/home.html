@@ -1,3 +1,92 @@
-<h1>
-    Hello, World!
-</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h1>Boston House Price Prediction</h1>
+    <div>
+      <form action="{{url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="crim"
+          placeholder="CRIM"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="zn"
+          placeholder="ZN"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="indus"
+          placeholder="INDUS"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="chas"
+          placeholder="CHAS"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="nox"
+          placeholder="NOX"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="rm"
+          placeholder="RM"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="age"
+          placeholder="AGE"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="dis"
+          placeholder="DIS"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="rad"
+          placeholder="RAD"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="tax"
+          placeholder="TAX"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="ptratio"
+          placeholder="PTRATIO"
+          required="required"
+        /><br />
+        <input type="text" name="b" placeholder="B" required="required" /><br />
+        <input
+          type="text"
+          name="lstat"
+          placeholder="LSTAT"
+          required="required"
+        /><br />
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <br />
+      <br />
+    </div>
+    {{prediction_text}}
+  </body>
+</html>
